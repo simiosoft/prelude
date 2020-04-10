@@ -2,10 +2,20 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <Version>0.1.0</Version>
+    <Authors>Gabriel Lima</Authors>
+    <Company>Simiosoft</Company>
+    <Description>Class library initially inspired by the "railroad oriented programming"</Description>
+    <Copyright>MIT</Copyright>
+    <RepositoryUrl>https://github.com/simiosoft/prelude</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>
     <Compile Include="Prelude.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Update="FSharp.Core" Version="4.7.1" />
   </ItemGroup>
 
 </Project>

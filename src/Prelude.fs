@@ -6,7 +6,7 @@ type Result<'TSuccess,'TFailure> =
     
 
 [<AutoOpen>]
-module Prelude =
+module RailroadOrientedProgramming =
 
     // convert a single value into a two-track result
     let succeed x = 

@@ -15,5 +15,7 @@ jobs:
           dotnet-version: 3.1.101
       - name: Pack
         run: dotnet pack src/Simiosoft.Prelude.fsproj --configuration Release
+      - name: Setup nuget config
+        run: sed 's/GITHUB_TOKEN/${{ secrets.GITHUB_TOKEN }}/g' nuget.config > nuget.config
       - name: Publish
-        run: dotnet nuget push **/*.nupkg --api-key ${{ secrets.GITHUB_TOKEN }} --source https://nuget.pkg.github.com/simiosoft/index.json
+        run: dotnet nuget push **/*.nupkg -s "github"

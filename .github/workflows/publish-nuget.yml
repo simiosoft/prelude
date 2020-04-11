@@ -16,6 +16,6 @@ jobs:
       - name: Pack
         run: dotnet pack src/Simiosoft.Prelude.fsproj --configuration Release
       - name: Setup nuget config
-        run: sed -i '' 's/GITHUB_TOKEN/${{ secrets.GITHUB_TOKEN }}/g' nuget.config
+        run: sed -i 's/GITHUB_TOKEN/${{ secrets.GITHUB_TOKEN }}/g' nuget.config
       - name: Publish
         run: dotnet nuget push **/*.nupkg -s "github"
